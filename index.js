@@ -23,11 +23,12 @@ module.exports = function () {
           }
 
           value = toSingleQuotes(value);
-
+		  if (value == 'image-set(\'\')'){return false}
           var openBrace = value.indexOf('(')
           var closeBrace = value.indexOf(')')
 		  //获取原件路径字符
 		  var vurlal = value.slice(10,closeBrace + 4)
+		 
 		  //获取原件分辨率倍数字符
 		  var vfor = value.slice(closeBrace + 2,closeBrace + 3)
 		  
@@ -44,7 +45,7 @@ module.exports = function () {
 		  
 		  var vsurlall =[];	  
 		  
-		  if(vfor != " " || vfor >= 1){	
+		  if(vfor != '' || vfor >= 1){	
 			  if(vsurlr == ".webp'"){					  
 			      for(var i=1; i< vfor; i++)
 				  {				  
@@ -64,12 +65,13 @@ module.exports = function () {
 		   var vsurlbak = vsurlall[0]
 		   var vsurlbaky = vsurlbak.slice(4,vsurlbak.length - 6)			
 
-		  declaration.value = 'url(' + vsurlbaky + ')'
-          rule.declarations.push({
+		   declaration.value = 'url(' + vsurlbaky + ')'
+           rule.declarations.push({
             type: 'declaration',
             property: 'background-image',
             value: vsurlvalur
-          })
+           })   
+		  
         }
       })
 
@@ -79,5 +81,7 @@ module.exports = function () {
 }
 
 function getDefaultImage (images) {
-  return images[0].trim().match(/'(.+?)'/)[0]
+	
+  		return images[0].trim().match(/'(.+?)'/)[0]
+
 }
