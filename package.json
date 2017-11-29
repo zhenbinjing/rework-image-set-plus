@@ -1,0 +1,44 @@
+{
+  "name": "rework-image-set-plus",
+  "version": "0.1.0",
+  "description": "Rework CSS plugin to add future-proofed support for W3C-style image-set notation.",
+  "author": {
+    "name": "zhenbinjing",
+    "email": "729494296@qq.com",
+    "url": "https://github.com/zhenbinjing/"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhenbinjing/rework-image-set-plus.git"
+  },
+  "keywords": [
+    "rework",
+    "image",
+    "images",
+    "img",
+    "image-set",
+    "css",
+    "responsive"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhenbinjing/rework-image-set-plus/issues"
+  },
+  "homepage": "https://github.com/zhenbinjing/rework-image-set-plus",
+  "dependencies": {
+    "balanced-match": "^0.2.0",
+    "rework": "^1.0.1",
+    "rework-walk": "^1.0.0",
+    "to-single-quotes": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "*"
+  }
+}
