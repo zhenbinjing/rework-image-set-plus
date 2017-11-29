@@ -25,7 +25,7 @@ var out = rework(css).use(imageSet()).toString()
 
 ```css
 .bg-img {
-  background-image: url('my-img@x1.png');
-  background-image: image-set(url('my-img@x1.png') 1x,url('my-img@x2.png') 2x, url('my-img@x3.png') 3x, url('my-img.png') 4x);
+  background-image: url('my-img@1x.png');
+  background-image: image-set(url('my-img@1x.png') 1x,url('my-img@2x.png') 2x, url('my-img@3x.png') 3x, url('my-img.png') 4x);
 }
 ```

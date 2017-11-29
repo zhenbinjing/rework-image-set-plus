@@ -1,6 +1,6 @@
 {
   "name": "rework-image-set-plus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rework CSS plugin to add future-proofed support for W3C-style image-set notation.",
   "author": {
     "name": "zhenbinjing",
